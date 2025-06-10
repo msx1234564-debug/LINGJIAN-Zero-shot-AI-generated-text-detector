@@ -147,40 +147,40 @@ if __name__ == "__main__":
     DEVICE = "cuda:0"
     bart_scorer = BARTScorer(device=DEVICE, checkpoint='bart-base')
     assuredness_scorer = Assuredness()
-    datasets = ['exp_Open_source_model/data/xsum_gpt2-xl.raw_data.json',
-                'exp_Open_source_model/data/xsum_gpt-neox-20b.raw_data.json',
-                'exp_Open_source_model/data/xsum_gpt-neo-2.7B.raw_data.json',
-                'exp_Open_source_model/data/xsum_gpt-j-6B.raw_data.json'
+    datasets = ['exp_Open_source_model/xsum_gpt2-xl.raw_data.json',
+                'exp_Open_source_model/xsum_gpt-neox-20b.raw_data.json',
+                'exp_Open_source_model/xsum_gpt-neo-2.7B.raw_data.json',
+                'exp_Open_source_model/xsum_gpt-j-6B.raw_data.json'
 
    
-                'exp_API-based_model/data/xsum_gemini.raw_data.json',
-                'exp_API-based_model/data/xsum_gpt-3.5-turbo.raw_data.json',
-                'exp_API-based_model/data/xsum_gpt-4.raw_data.json',
-                'exp_Open_source_model/data/xsum_opt-2.7b.raw_data.json',
+                'exp_API-based_model/xsum_gemini.raw_data.json',
+                'exp_API-based_model/xsum_gpt-3.5-turbo.raw_data.json',
+                'exp_API-based_model/xsum_gpt-4.raw_data.json',
+                'exp_Open_source_model/xsum_opt-2.7b.raw_data.json',
 
 
 
-                'exp_API-based_model/data/pubmed_gemini.raw_data.json',
-                'exp_API-based_model/data/pubmed_gpt-3.5-turbo.raw_data.json',
-                'exp_API-based_model/data/pubmed_gpt-4.raw_data.json',
+                'exp_API-based_model/pubmed_gemini.raw_data.json',
+                'exp_API-based_model/pubmed_gpt-3.5-turbo.raw_data.json',
+                'exp_API-based_model/pubmed_gpt-4.raw_data.json',
 
-                'exp_API-based_model/data/writing_gemini.raw_data.json',
-                'exp_API-based_model/data/writing_gpt-3.5-turbo.raw_data.json',
-                'exp_API-based_model/data/writing_gpt-4.raw_data.json',
-                'exp_Open_source_model/data/writing_gpt2-xl.raw_data.json',
-                'exp_Open_source_model/data/writing_opt-2.7b.raw_data.json',
-                'exp_Open_source_model/data/writing_gpt-neox-20b.raw_data.json',
-                'exp_Open_source_model/data/writing_gpt-neo-2.7B.raw_data.json',
-                'exp_Open_source_model/data/writing_gpt-j-6B.raw_data.json',
+                'exp_API-based_model/writing_gemini.raw_data.json',
+                'exp_API-based_model/writing_gpt-3.5-turbo.raw_data.json',
+                'exp_API-based_model/writing_gpt-4.raw_data.json',
+                'exp_Open_source_model/writing_gpt2-xl.raw_data.json',
+                'exp_Open_source_model/writing_opt-2.7b.raw_data.json',
+                'exp_Open_source_model/writing_gpt-neox-20b.raw_data.json',
+                'exp_Open_source_model/writing_gpt-neo-2.7B.raw_data.json',
+                'exp_Open_source_model/writing_gpt-j-6B.raw_data.json',
 
-                'exp_Open_source_model/data/squad_opt-2.7b.raw_data.json',
-                'exp_Open_source_model/data/squad_gpt-neox-20b.raw_data.json',
-                'exp_Open_source_model/data/squad_gpt-neo-2.7B.raw_data.json',
-                'exp_Open_source_model/data/squad_gpt-j-6B.raw_data.json',
-                'exp_Open_source_model/data/squad_gpt2-xl.raw_data.json',
+                'exp_Open_source_model/squad_opt-2.7b.raw_data.json',
+                'exp_Open_source_model/squad_gpt-neox-20b.raw_data.json',
+                'exp_Open_source_model/squad_gpt-neo-2.7B.raw_data.json',
+                'exp_Open_source_model/squad_gpt-j-6B.raw_data.json',
+                'exp_Open_source_model/squad_gpt2-xl.raw_data.json',
                 ]
     pres = []
     for dataset in datasets:
         pres.append(evaluate(dataset))
-    save_llr_histograms(pres)
+    #save_llr_histograms(pres)
 
